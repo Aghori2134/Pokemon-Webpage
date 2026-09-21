@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Webpage Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+   
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        
+        /* Hero Background Image & Styling */
+        .hero {
+            background-image:url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero2 {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLB_ZIpDqWWlE74K7LsUpLrxpOHTi0QaHUoENdkgvDw&s=10');
+            background-size: 100% 100%;
+        }
+	
+        .chari {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLB_ZIpDqWWlE74K7LsUpLrxpOHTi0QaHUoENdkgvDw&s=10');
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body class="bg-[#050c14] text-white antialiased selection:bg-yellow-400 selection:text-black">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#050c14]/90 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-yellow-400 to-yellow-200 text-black font-black shadow-lg shadow-yellow-500/20 overflow-hidden p-1">
+                    <img src="https://www.freepnglogos.com/uploads/pokeball-png/pokeball-icon-uto-circle-icons-softiconsm-26.png" class="h-full w-full object-contain" alt="Pokeball">
+                </div>
+                <span class="text-2xl font-black tracking-wider text-yellow-400 drop-shadow-[0_2px_10px_rgba(250,204,21,0.3)]">Pokémon</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                <a href="#" class="relative pb-1 text-yellow-400 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-yellow-400">Home</a>
+                <a href="#" class="transition hover:text-yellow-400">Pokédex</a>
+                <a href="#" class="transition hover:text-yellow-400">Characters</a>
+                <a href="#" class="transition hover:text-yellow-400">Regions</a>
+                <a href="#" class="transition hover:text-yellow-400">Gallery</a>
+                <a href="#" class="transition hover:text-yellow-400">About</a>
+            </nav>
+            <div class="hidden lg:flex items-center rounded-full border border-white/10 bg-[#0b1624] px-4 py-2 w-64 shadow-inner">
+                <svg class="h-4 w-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span class="text-sm text-gray-400">Search Pokémon...</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-24 lg:py-32 hero">
+        <div class="absolute -right-20 top-20 h-96 w-96 rounded-full bg-yellow-500/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 top-40 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
+
+        <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-red-400 shadow-sm">
+                    <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+                    Gotta Catch 'Em All !
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight">
+                    Welcome to the <br>
+                    <span class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent drop-shadow-md">
+                        Pokémon World
+                    </span>
+                </h1>
+
+                <p class="max-w-xl text-base sm:text-lg text-gray-300 font-normal leading-relaxed">
+                    Explore new regions, discover amazing Pokémon, train your team and become the very best!
+                </p>
+
+                <div class="pt-2 flex flex-wrap gap-4 items-center">
+                    <a href="#" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-yellow-400 to-amber-400 px-8 py-4 text-sm font-extrabold text-black shadow-lg shadow-yellow-400/20 transition-all hover:scale-105 hover:shadow-yellow-400/40">
+                        <span>Start Your Journey</span>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative flex justify-center items-center">
+                <div class="relative w-full max-w-md aspect-[4/3] sm:aspect-square rounded-3xl border border-white/10 p-6 shadow-2xl flex flex-col items-center justify-center text-center group overflow-hidden  backdrop-blur-sm">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col items-center justify-center space-y-3">
+                        <div class="h-24 w-24 rounded-2xl bg-yellow-400/20 border border-yellow-400/40 flex items-center justify-center p-3 shadow-inner animate-bounce">
+                            <img src="https://pngimg.com/uploads/pikachu/pikachu_PNG32.png" class="h-full w-full object-contain" alt="Pikachu">
+                        </div>
+                        <span class="text-lg font-bold text-yellow-300">Hero Pikachu & Region Artwork</span>
+                        <span class="text-xs text-gray-400 max-w-[240px]">Placeholder Box: Drop hero image asset here (1200x1200px recommended)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-y border-white/10 bg-[#07111d] py-10">
+        <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group relative rounded-2xl border border-white/10 bg-[#0a1728] p-6 transition-all hover:-translate-y-1 hover:border-red-500/50 hover:bg-[#0e2038] shadow-lg">
+                <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xl font-bold group-hover:scale-110 transition-transform p-2.5">
+                    <img src="https://www.freepnglogos.com/uploads/pokeball-png/pokeball-icon-uto-circle-icons-softiconsm-26.png" class="h-full w-full object-contain" alt="Pokeball icon">
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Explore Regions</h3>
+                <p class="text-sm text-gray-400 mb-4 leading-relaxed">Visit Kanto, Johto, Hoenn, Sinnoh and more!</p>
+                <span class="inline-flex items-center text-xs font-bold text-red-400 group-hover:translate-x-1 transition-transform">Explore →</span>
+            </div>
+            <div class="group relative rounded-2xl border border-white/10 bg-[#0a1728] p-6 transition-all hover:-translate-y-1 hover:border-yellow-500/50 hover:bg-[#0e2038] shadow-lg">
+                <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xl font-bold group-hover:scale-110 transition-transform p-2">
+                    <img src="https://pngimg.com/uploads/pikachu/pikachu_PNG32.png" class="h-full w-full object-contain" alt="Pikachu icon">
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Build Your Team</h3>
+                <p class="text-sm text-gray-400 mb-4 leading-relaxed">Catch, train and evolve your favorite Pokémon.</p>
+                <span class="inline-flex items-center text-xs font-bold text-yellow-400 group-hover:translate-x-1 transition-transform">Build →</span>
+            </div>
+            <div class="group relative rounded-2xl border border-white/10 bg-[#0a1728] p-6 transition-all hover:-translate-y-1 hover:border-blue-500/50 hover:bg-[#0e2038] shadow-lg">
+                <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xl font-bold group-hover:scale-110 transition-transform p-2.5">
+                    <img src="images/badg.png" class="h-full w-full object-contain">
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Earn Badges</h3>
+                <p class="text-sm text-gray-400 mb-4 leading-relaxed">Challenge Gym Leaders and prove your skills.</p>
+                <span class="inline-flex items-center text-xs font-bold text-blue-400 group-hover:translate-x-1 transition-transform">Challenge →</span>
+            </div>
+            <div class="group relative rounded-2xl border border-white/10 bg-[#0a1728] p-6 transition-all hover:-translate-y-1 hover:border-purple-500/50 hover:bg-[#0e2038] shadow-lg">
+                <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xl font-bold group-hover:scale-110 transition-transform">
+                    🏆
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Join the Adventure</h3>
+                <p class="text-sm text-gray-400 mb-4 leading-relaxed">Battle, trade and make new friends worldwide.</p>
+                <span class="inline-flex items-center text-xs font-bold text-purple-400 group-hover:translate-x-1 transition-transform">Join →</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-16 grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 rounded-3xl border border-white/10 bg-[#081524] p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-orange-600/10 blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 mb-6 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="h-2.5 w-2.5 rounded-full bg-red-500"></span>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-red-400">Featured Pokémon</span>
+                </div>
+            </div>
+            <div class="relative z-10 rounded-2xl border border-white/10 bg-[#0d1e33] overflow-hidden mb-6 group chari">
+                <div class="h-64 sm:h-72 w-full bg-gradient-to-tr from-amber-900/40 via-red-950/60 to-[#0e1d30] flex flex-col items-center justify-center text-center p-6 relative">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="relative z-10 space-y-2">
+                        <h3 class="text-2xl font-black text-white tracking-wide">Charizard Artwork Placeholder</h3>
+                        <p class="text-xs text-gray-300 max-w-xs mx-auto">Drop high-res Charizard battle rendering here (800x600px)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-4">
+                    <h2 class="text-3xl font-black text-white">Charizard</h2>
+                    <div class="flex items-center gap-2">
+                        <span class="rounded-lg bg-orange-500/20 border border-orange-500/40 px-3 py-1 text-xs font-bold text-orange-400">FIRE</span>
+                        <span class="rounded-lg bg-blue-500/20 border border-blue-500/40 px-3 py-1 text-xs font-bold text-blue-400">FLYING</span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Charizard is a powerful and proud Pokémon. It can melt boulders with its fire and fly high in the sky.
+                </p>
+
+                <div class="pt-2">
+                    <a href="#" class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-xs font-bold text-white transition-all hover:bg-yellow-400 hover:text-black hover:border-yellow-400">
+                        <span>View in Pokédex</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-5 rounded-3xl border border-white/10 bg-[#081524] p-6 sm:p-8 shadow-xl">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                    Quick Pokédex
+                </h3>
+                <a href="#" class="text-xs font-bold text-yellow-400 hover:underline">View All →</a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-2xl border border-white/10 bg-[#0d1e33] p-4 text-center transition-all hover:border-yellow-400 hover:-translate-y-1">
+                    <div class="h-20 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center p-2 mb-3">
+                        <img src="https://pngimg.com/uploads/pokemon/pokemon_PNG102.png" class="h-full w-full object-contain" alt="Pikachu">
+                    </div>
+                    <h4 class="font-bold text-white text-sm mb-2">Pikachu</h4>
+                    <span class="inline-block rounded-full bg-yellow-500/20 border border-yellow-500/40 px-2.5 py-0.5 text-[10px] font-extrabold text-yellow-300">ELECTRIC</span>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#0d1e33] p-4 text-center transition-all hover:border-green-400 hover:-translate-y-1">
+                    <div class="h-20 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center p-2 mb-3">
+                        <img src="https://www.nicepng.com/png/full/99-992459_bulbasaur-what-type-of-pokemon-do-you-think.png" class="h-full w-full object-contain" alt="Bulbasaur">
+                    </div>
+                    <h4 class="font-bold text-white text-sm mb-2">Bulbasaur</h4>
+                    <span class="inline-block rounded-full bg-green-500/20 border border-green-500/40 px-2.5 py-0.5 text-[10px] font-extrabold text-green-300">GRASS</span>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#0d1e33] p-4 text-center transition-all hover:border-blue-400 hover:-translate-y-1">
+                    <div class="h-20 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center p-2 mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Pok%C3%A9mon_Squirtle_art.png" class="h-full w-full object-contain" alt="Squirtle">
+                    </div>
+                    <h4 class="font-bold text-white text-sm mb-2">Squirtle</h4>
+                    <span class="inline-block rounded-full bg-blue-500/20 border border-blue-500/40 px-2.5 py-0.5 text-[10px] font-extrabold text-blue-300">WATER</span>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-[#0d1e33] p-4 text-center transition-all hover:border-amber-400 hover:-translate-y-1">
+                    <div class="h-20 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center p-2 mb-3">
+                        <img src="https://i.pinimg.com/originals/5f/00/ce/5f00ce0ffa1260609cac8f690a9b0864.png" class="h-full w-full object-contain" alt="Eevee">
+                    </div>
+                    <h4 class="font-bold text-white text-sm mb-2">Eevee</h4>
+                    <span class="inline-block rounded-full bg-amber-500/20 border border-amber-500/40 px-2.5 py-0.5 text-[10px] font-extrabold text-amber-300">NORMAL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overflow-hidden py-16 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#071321] via-[#0b1d33] to-[#071321] border-y border-white/10 pointer-events-none">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="absolute inset-0 flex items-center justify-end pr-20 opacity-15 pointer-events-none text-9xl">🏔</div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-6 relative z-10 grid lg:grid-cols-12 gap-8 hero" style="padding:30px 100px; border-radius:10px">
+            <div class="lg:col-span-7 rounded-3xl border border-white/10 bg-[#081524]/95 backdrop-blur-md p-6 sm:p-8 shadow-xl">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="h-2.5 w-2.5 rounded-full bg-yellow-400"></span>
+                    <h2 class="text-xl font-bold text-white">Top 5 Strongest Pokémon</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between rounded-xl border border-white/5 bg-[#0d1e33] p-3.5 transition-all hover:border-white/20">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-yellow-400 text-xs font-black text-black shadow">1</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center overflow-hidden p-1"><img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/493.png" class="h-full w-full object-contain" alt="Arceus"></div>
+                                <span class="font-bold text-white text-sm">Arceus</span>
+                            </div>
+                        </div>
+                        <span class="rounded-md bg-gray-500/20 border border-gray-500/40 px-2.5 py-1 text-[10px] font-extrabold text-gray-300">NORMAL</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-white/5 bg-[#0d1e33] p-3.5 transition-all hover:border-white/20">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-300 text-xs font-black text-black shadow">2</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center overflow-hidden p-1"><img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/150.png" class="h-full w-full object-contain" alt="Mewtwo"></div>
+                                <span class="font-bold text-white text-sm">Mewtwo</span>
+                            </div>
+                        </div>
+                        <span class="rounded-md bg-purple-500/20 border border-purple-500/40 px-2.5 py-1 text-[10px] font-extrabold text-purple-300">PSYCHIC</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-white/5 bg-[#0d1e33] p-3.5 transition-all hover:border-white/20">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-700 text-xs font-black text-white shadow">3</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center overflow-hidden p-1"><img src="https://www.nicepng.com/png/full/226-2266904_visit-pokemon-rayquaza.png" class="h-full w-full object-contain" alt="Rayquaza"></div>
+                                <span class="font-bold text-white text-sm">Rayquaza</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-1">
+                            <span class="rounded-md bg-emerald-500/20 border border-emerald-500/40 px-2 py-1 text-[10px] font-extrabold text-emerald-300">DRAGON</span>
+                            <span class="rounded-md bg-sky-500/20 border border-sky-500/40 px-2 py-1 text-[10px] font-extrabold text-sky-300">FLYING</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-white/5 bg-[#0d1e33] p-3.5 transition-all hover:border-white/20">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-xs font-black text-white shadow">4</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center overflow-hidden p-1"><img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/383.png" class="h-full w-full object-contain" alt="Groudon"></div>
+                                <span class="font-bold text-white text-sm">Groudon</span>
+                            </div>
+                        </div>
+                        <span class="rounded-md bg-amber-600/20 border border-amber-600/40 px-2.5 py-1 text-[10px] font-extrabold text-amber-400">GROUND</span>
+                    </div>
+                    <div class="flex items-center justify-between rounded-xl border border-white/5 bg-[#0d1e33] p-3.5 transition-all hover:border-white/20">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-xs font-black text-white shadow">5</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center overflow-hidden p-1"><img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/382.png" class="h-full w-full object-contain" alt="Kyogre"></div>
+                                <span class="font-bold text-white text-sm">Kyogre</span>
+                            </div>
+                        </div>
+                        <span class="rounded-md bg-blue-600/20 border border-blue-600/40 px-2.5 py-1 text-[10px] font-extrabold text-blue-400">WATER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 rounded-3xl border border-white/10 bg-[#081524]/95 backdrop-blur-md p-6 sm:p-8 shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                            Latest News
+                        </h2>
+                        <a href="#" class="text-xs font-bold text-yellow-400 hover:underline">View All →</a>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="group rounded-2xl border border-white/5 bg-[#0d1e33] p-4 transition-all hover:border-yellow-400/50">
+                            <div class="flex gap-4 items-start">
+                                <div class="h-16 w-20 rounded-xl bg-blue-950/60 border border-blue-500/30 flex items-center justify-center overflow-hidden p-2 shrink-0">
+                                    <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/151.png" class="h-full w-full object-contain" alt="Mew">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm group-hover:text-yellow-400 transition-colors">New Pokémon Scarlet & Violet DLC Announced!</h4>
+                                    <p class="text-[11px] text-gray-400 mt-1">Aug 12, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-2xl border border-white/5 bg-[#0d1e33] p-4 transition-all hover:border-yellow-400/50">
+                            <div class="flex gap-4 items-start">
+                                <div class="h-16 w-20 rounded-xl bg-amber-950/60 border border-amber-500/30 flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSilXDRPTzXIa_5V97UsIcNzgHX_fmkrUouYmGfuT5xQw&s=10" class="h-full w-full object-cover rounded-lg" alt="Shiny">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm group-hover:text-yellow-400 transition-colors">Shiny Pokémon Event Starts This Weekend!</h4>
+                                    <p class="text-[11px] text-gray-400 mt-1">Aug 05, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-2xl border border-white/5 bg-[#0d1e33] p-4 transition-all hover:border-yellow-400/50">
+                            <div class="flex gap-4 items-start">
+                                <div class="h-16 w-20 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarK-ptEqUv4l36dq34wv3QI7n4tzminv-cp8kAGDDEA&s=10" class="h-full w-full object-cover rounded-lg" alt="Pokemon Day">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm group-hover:text-yellow-400 transition-colors">Pokémon Day 2026 Celebration Plans Revealed!</h4>
+                                    <p class="text-[11px] text-gray-400 mt-1">Jul 28, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-[#030810] py-12">
+        <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="flex items-center gap-3">
+                    <div class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 text-black font-black overflow-hidden p-1">
+                        <img src="https://www.freepnglogos.com/uploads/pokeball-png/pokeball-icon-uto-circle-icons-softiconsm-26.png" class="h-full w-full object-contain" alt="Pokeball">
+                    </div>
+                    <span class="text-xl font-black tracking-wider text-yellow-400">Pokémon</span>
+                </div>
+                <p class="text-xs text-gray-400">More Pokémon More Fun! • Gotta Catch 'Em All!</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-gray-300">
+                <a href="#" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#" class="hover:text-yellow-400 transition">Pokédex</a>
+                <a href="#" class="hover:text-yellow-400 transition">Characters</a>
+                <a href="#" class="hover:text-yellow-400 transition">Regions</a>
+                <a href="#" class="hover:text-yellow-400 transition">Gallery</a>
+                <a href="#" class="hover:text-yellow-400 transition">About</a>
+            </div>
+            <div class="flex items-center gap-4 text-gray-400">
+                <div class="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs hover:border-yellow-400 hover:text-yellow-400 cursor-pointer transition"><i class="ri-youtube-fill"></i></div>
+                <div class="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs hover:border-yellow-400 hover:text-yellow-400 cursor-pointer transition"><i class="ri-discord-fill"></i></div>
+                <div class="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs hover:border-yellow-400 hover:text-yellow-400 cursor-pointer transition"><i class="ri-instagram-fill"></i></div>
+                <div class="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-xs hover:border-yellow-400 hover:text-yellow-400 cursor-pointer transition"><i class="ri-twitter-x-fill"></i></div>
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-6 mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-500">
+            © 2026 Pokémon. All rights reserved. Practice Tailwind template.
+        </div>
+    </footer>
+</body>
+</html>
